@@ -1,0 +1,16 @@
+# Python virtual environment
+eco_venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Raw and processed datasets
+data/raw/
+data/processed/
+
+# Environment variables and secrets
+.env
