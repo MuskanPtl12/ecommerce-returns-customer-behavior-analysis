@@ -1,0 +1,301 @@
+product_id,product_name,category,sub_category,selling_price,unit_cost
+P0001,Pressure Cooker,Home & Kitchen,Cookware,2875.7,1765.34
+P0002,Screen Protector,Electronics,Mobile Accessories,1897.41,1414.6
+P0003,Wardrobe Organizer,Home & Kitchen,Storage,2550.82,1277.0
+P0004,Smartwatch Pro,Electronics,Smartwatches,3780.59,1767.6
+P0005,Lipstick,Beauty,Makeup,1489.04,822.99
+P0006,Wall Clock,Home & Kitchen,Decor,967.51,668.49
+P0007,Plastic Container Set,Home & Kitchen,Storage,2312.46,1552.54
+P0008,Smartwatch Pro,Electronics,Smartwatches,1912.76,1238.97
+P0009,Pressure Cooker,Home & Kitchen,Cookware,450.54,285.94
+P0010,Kurti,Apparel,Women'S Wear,1185.61,705.95
+P0011,Shampoo,Beauty,Haircare,345.79,243.7
+P0012,Denim Jeans,Apparel,Men'S Wear,1337.76,888.7
+P0013,Phone Case,Electronics,Mobile Accessories,2763.18,1523.98
+P0014,Lipstick,Beauty,Makeup,2391.2,1292.32
+P0015,Fitness Band,Electronics,Smartwatches,2916.84,1692.6
+P0016,Non-Stick Pan,Home & Kitchen,Cookware,916.18,422.38
+P0017,Hair Oil,Beauty,Haircare,515.36,366.71
+P0018,Plastic Container Set,Home & Kitchen,Storage,1496.6,972.95
+P0019,Face Wash,Beauty,Skincare,2023.58,1120.51
+P0020,Cotton T-Shirt,Apparel,Men'S Wear,1097.31,520.92
+P0021,Smartwatch Pro,Electronics,Smartwatches,3336.98,1696.5
+P0022,Running Shoes,Apparel,Footwear,1959.74,972.82
+P0023,Table Lamp,Home & Kitchen,Decor,1519.92,1126.11
+P0024,Running Shoes,Apparel,Footwear,1389.28,640.48
+P0025,Charging Cable,Electronics,Mobile Accessories,3333.0,1648.2
+P0026,Moisturizer,Beauty,Skincare,2392.98,1688.04
+P0027,Hair Oil,Beauty,Haircare,139.76,95.4
+P0028,Cotton T-Shirt,Apparel,Men'S Wear,1813.52,1265.79
+P0029,Summer Dress,Apparel,Women'S Wear,748.16,426.79
+P0030,Pressure Cooker,Home & Kitchen,Cookware,1901.13,1247.39
+P0031,Foundation,Beauty,Makeup,1401.48,937.97
+P0032,Hair Oil,Beauty,Haircare,2978.71,1461.79
+P0033,Screen Protector,Electronics,Mobile Accessories,787.67,390.25
+P0034,Shampoo,Beauty,Haircare,2230.01,1118.02
+P0035,Charging Cable,Electronics,Mobile Accessories,3288.05,1609.27
+P0036,Pressure Cooker,Home & Kitchen,Cookware,3040.51,1445.39
+P0037,Kurti,Apparel,Women'S Wear,583.88,272.78
+P0038,Foundation,Beauty,Makeup,177.9,128.14
+P0039,Plastic Container Set,Home & Kitchen,Storage,435.25,323.37
+P0040,Fitness Band,Electronics,Smartwatches,1113.08,755.33
+P0041,Summer Dress,Apparel,Women'S Wear,3028.05,1559.67
+P0042,Fitness Band,Electronics,Smartwatches,3576.51,1680.05
+P0043,Hair Oil,Beauty,Haircare,3162.19,1929.42
+P0044,Fitness Band,Electronics,Smartwatches,2530.7,1306.13
+P0045,Fitness Band,Electronics,Smartwatches,2289.87,1370.83
+P0046,Plastic Container Set,Home & Kitchen,Storage,860.67,419.57
+P0047,Hair Oil,Beauty,Haircare,1869.95,1100.64
+P0048,Face Wash,Beauty,Skincare,1835.65,875.84
+P0049,Wireless Earbuds,Electronics,Headphones,1203.15,846.75
+P0050,Screen Protector,Electronics,Mobile Accessories,1172.84,652.42
+P0051,Face Wash,Beauty,Skincare,309.53,142.0
+P0052,Hair Oil,Beauty,Haircare,2735.25,1544.58
+P0053,Moisturizer,Beauty,Skincare,112.56,58.92
+P0054,Wardrobe Organizer,Home & Kitchen,Storage,2627.53,1459.87
+P0055,Phone Case,Electronics,Mobile Accessories,1651.14,773.45
+P0056,Screen Protector,Electronics,Mobile Accessories,3539.45,1680.53
+P0057,Hair Oil,Beauty,Haircare,3245.6,1707.49
+P0058,Non-Stick Pan,Home & Kitchen,Cookware,3621.58,1997.82
+P0059,Sandals,Apparel,Footwear,735.16,354.43
+P0060,Foundation,Beauty,Makeup,444.65,331.95
+P0061,Denim Jeans,Apparel,Men'S Wear,2077.9,1407.18
+P0062,Fitness Band,Electronics,Smartwatches,2305.54,1141.81
+P0063,Cotton T-Shirt,Apparel,Men'S Wear,683.22,330.33
+P0064,Face Wash,Beauty,Skincare,2420.08,1429.7
+P0065,Running Shoes,Apparel,Footwear,3583.53,1850.56
+P0066,Foundation,Beauty,Makeup,1784.97,1160.36
+P0067,Pressure Cooker,Home & Kitchen,Cookware,108.56,65.08
+P0068,Face Wash,Beauty,Skincare,3387.94,1665.76
+P0069,Wireless Earbuds,Electronics,Headphones,3333.7,1616.85
+P0070,Lipstick,Beauty,Makeup,1075.71,580.98
+P0071,Wireless Earbuds,Electronics,Headphones,4005.83,1881.79
+P0072,Denim Jeans,Apparel,Men'S Wear,1179.21,746.76
+P0073,Cotton T-Shirt,Apparel,Men'S Wear,4134.15,1929.31
+P0074,Hair Oil,Beauty,Haircare,794.92,506.26
+P0075,Lipstick,Beauty,Makeup,2530.44,1710.93
+P0076,Wall Clock,Home & Kitchen,Decor,2642.4,1422.55
+P0077,Screen Protector,Electronics,Mobile Accessories,2084.54,996.05
+P0078,Phone Case,Electronics,Mobile Accessories,256.33,179.77
+P0079,Face Wash,Beauty,Skincare,2037.16,944.09
+P0080,Fitness Band,Electronics,Smartwatches,1482.63,904.92
+P0081,Charging Cable,Electronics,Mobile Accessories,832.57,387.82
+P0082,Face Wash,Beauty,Skincare,1189.94,905.31
+P0083,Smartwatch Pro,Electronics,Smartwatches,1269.49,919.01
+P0084,Table Lamp,Home & Kitchen,Decor,1184.21,769.31
+P0085,Hair Oil,Beauty,Haircare,292.45,186.23
+P0086,Lipstick,Beauty,Makeup,1149.15,777.59
+P0087,Shampoo,Beauty,Haircare,935.49,657.48
+P0088,Foundation,Beauty,Makeup,2080.76,1184.82
+P0089,Non-Stick Pan,Home & Kitchen,Cookware,74.27,52.17
+P0090,Wireless Earbuds,Electronics,Headphones,458.03,315.25
+P0091,Fitness Band,Electronics,Smartwatches,2967.81,1911.36
+P0092,Denim Jeans,Apparel,Men'S Wear,3285.65,1927.07
+P0093,Pressure Cooker,Home & Kitchen,Cookware,1476.77,720.47
+P0094,Table Lamp,Home & Kitchen,Decor,2618.11,1781.47
+P0095,Plastic Container Set,Home & Kitchen,Storage,1100.47,520.7
+P0096,Denim Jeans,Apparel,Men'S Wear,373.52,277.42
+P0097,Shampoo,Beauty,Haircare,2003.06,926.27
+P0098,Denim Jeans,Apparel,Men'S Wear,806.53,533.99
+P0099,Table Lamp,Home & Kitchen,Decor,2354.21,1263.95
+P0100,Kurti,Apparel,Women'S Wear,697.93,412.05
+P0101,Running Shoes,Apparel,Footwear,1750.53,1166.85
+P0102,Hair Oil,Beauty,Haircare,1925.35,1194.8
+P0103,Wardrobe Organizer,Home & Kitchen,Storage,625.56,336.54
+P0104,Sandals,Apparel,Footwear,3978.52,1985.5
+P0105,Denim Jeans,Apparel,Men'S Wear,2718.54,1799.23
+P0106,Phone Case,Electronics,Mobile Accessories,4020.44,1831.08
+P0107,Fitness Band,Electronics,Smartwatches,3180.1,1890.03
+P0108,Plastic Container Set,Home & Kitchen,Storage,1052.89,699.11
+P0109,Foundation,Beauty,Makeup,2472.05,1425.47
+P0110,Foundation,Beauty,Makeup,1803.39,1031.03
+P0111,Face Wash,Beauty,Skincare,2204.26,1274.16
+P0112,Pressure Cooker,Home & Kitchen,Cookware,1183.37,660.1
+P0113,Plastic Container Set,Home & Kitchen,Storage,1624.54,825.79
+P0114,Kurti,Apparel,Women'S Wear,2098.91,1039.64
+P0115,Wireless Earbuds,Electronics,Headphones,625.27,337.84
+P0116,Denim Jeans,Apparel,Men'S Wear,1198.25,578.3
+P0117,Fitness Band,Electronics,Smartwatches,2383.14,1726.0
+P0118,Wall Clock,Home & Kitchen,Decor,1031.3,621.93
+P0119,Summer Dress,Apparel,Women'S Wear,778.58,467.71
+P0120,Screen Protector,Electronics,Mobile Accessories,1536.42,757.46
+P0121,Shampoo,Beauty,Haircare,2466.41,1147.48
+P0122,Face Wash,Beauty,Skincare,374.97,234.58
+P0123,Summer Dress,Apparel,Women'S Wear,1226.32,702.98
+P0124,Kurti,Apparel,Women'S Wear,2224.95,1276.56
+P0125,Fitness Band,Electronics,Smartwatches,309.81,162.62
+P0126,Plastic Container Set,Home & Kitchen,Storage,3831.57,1903.38
+P0127,Wardrobe Organizer,Home & Kitchen,Storage,2967.33,1998.62
+P0128,Wireless Earbuds,Electronics,Headphones,818.1,500.35
+P0129,Table Lamp,Home & Kitchen,Decor,2288.74,1415.58
+P0130,Table Lamp,Home & Kitchen,Decor,2793.67,1971.52
+P0131,Foundation,Beauty,Makeup,2373.68,1717.21
+P0132,Sandals,Apparel,Footwear,2217.9,1153.87
+P0133,Cotton T-Shirt,Apparel,Men'S Wear,1570.37,886.19
+P0134,Over-Ear Headphones,Electronics,Headphones,2455.09,1466.79
+P0135,Cotton T-Shirt,Apparel,Men'S Wear,2541.38,1305.94
+P0136,Cotton T-Shirt,Apparel,Men'S Wear,2127.59,1157.85
+P0137,Smartwatch Pro,Electronics,Smartwatches,2565.67,1818.76
+P0138,Wardrobe Organizer,Home & Kitchen,Storage,2427.91,1479.29
+P0139,Denim Jeans,Apparel,Men'S Wear,2668.0,1956.62
+P0140,Lipstick,Beauty,Makeup,1217.67,688.97
+P0141,Kurti,Apparel,Women'S Wear,2764.55,1430.43
+P0142,Moisturizer,Beauty,Skincare,1813.26,971.51
+P0143,Wardrobe Organizer,Home & Kitchen,Storage,2147.78,1346.14
+P0144,Running Shoes,Apparel,Footwear,798.24,467.51
+P0145,Kurti,Apparel,Women'S Wear,687.27,345.06
+P0146,Sandals,Apparel,Footwear,1981.09,1369.2
+P0147,Summer Dress,Apparel,Women'S Wear,2338.62,1719.57
+P0148,Lipstick,Beauty,Makeup,1982.06,1478.37
+P0149,Wardrobe Organizer,Home & Kitchen,Storage,227.24,144.31
+P0150,Wall Clock,Home & Kitchen,Decor,514.46,241.57
+P0151,Summer Dress,Apparel,Women'S Wear,1813.59,1302.93
+P0152,Cotton T-Shirt,Apparel,Men'S Wear,143.44,105.94
+P0153,Summer Dress,Apparel,Women'S Wear,2538.61,1288.29
+P0154,Wardrobe Organizer,Home & Kitchen,Storage,3119.47,1475.58
+P0155,Over-Ear Headphones,Electronics,Headphones,415.75,266.04
+P0156,Plastic Container Set,Home & Kitchen,Storage,2370.36,1396.33
+P0157,Shampoo,Beauty,Haircare,1897.33,1319.56
+P0158,Denim Jeans,Apparel,Men'S Wear,386.86,192.86
+P0159,Denim Jeans,Apparel,Men'S Wear,4039.6,1993.59
+P0160,Face Wash,Beauty,Skincare,1344.61,911.82
+P0161,Kurti,Apparel,Women'S Wear,2653.32,1783.94
+P0162,Lipstick,Beauty,Makeup,1973.51,1191.56
+P0163,Wall Clock,Home & Kitchen,Decor,96.49,55.85
+P0164,Hair Oil,Beauty,Haircare,2488.21,1160.28
+P0165,Over-Ear Headphones,Electronics,Headphones,1674.05,1073.4
+P0166,Wardrobe Organizer,Home & Kitchen,Storage,260.47,163.98
+P0167,Table Lamp,Home & Kitchen,Decor,3243.13,1694.68
+P0168,Smartwatch Pro,Electronics,Smartwatches,905.27,663.1
+P0169,Hair Oil,Beauty,Haircare,486.49,326.06
+P0170,Foundation,Beauty,Makeup,2218.21,1331.52
+P0171,Plastic Container Set,Home & Kitchen,Storage,2996.65,1937.23
+P0172,Hair Oil,Beauty,Haircare,2355.33,1095.52
+P0173,Cotton T-Shirt,Apparel,Men'S Wear,2330.91,1650.11
+P0174,Fitness Band,Electronics,Smartwatches,2928.68,1529.22
+P0175,Screen Protector,Electronics,Mobile Accessories,1773.74,942.71
+P0176,Over-Ear Headphones,Electronics,Headphones,1721.64,861.42
+P0177,Smartwatch Pro,Electronics,Smartwatches,1537.89,1020.48
+P0178,Plastic Container Set,Home & Kitchen,Storage,3459.04,1931.05
+P0179,Kurti,Apparel,Women'S Wear,193.16,103.72
+P0180,Fitness Band,Electronics,Smartwatches,472.82,357.96
+P0181,Over-Ear Headphones,Electronics,Headphones,2720.4,1362.56
+P0182,Wall Clock,Home & Kitchen,Decor,762.23,527.63
+P0183,Kurti,Apparel,Women'S Wear,1611.91,1010.48
+P0184,Hair Oil,Beauty,Haircare,3131.09,1758.75
+P0185,Lipstick,Beauty,Makeup,759.04,488.8
+P0186,Fitness Band,Electronics,Smartwatches,1340.25,626.57
+P0187,Charging Cable,Electronics,Mobile Accessories,2765.62,1739.57
+P0188,Non-Stick Pan,Home & Kitchen,Cookware,2584.9,1721.69
+P0189,Foundation,Beauty,Makeup,1108.14,626.12
+P0190,Summer Dress,Apparel,Women'S Wear,1179.63,557.22
+P0191,Pressure Cooker,Home & Kitchen,Cookware,2408.29,1761.75
+P0192,Shampoo,Beauty,Haircare,386.14,261.36
+P0193,Plastic Container Set,Home & Kitchen,Storage,1503.31,1018.94
+P0194,Over-Ear Headphones,Electronics,Headphones,1344.42,831.25
+P0195,Shampoo,Beauty,Haircare,3151.05,1590.74
+P0196,Kurti,Apparel,Women'S Wear,1074.99,774.99
+P0197,Hair Oil,Beauty,Haircare,99.23,70.45
+P0198,Summer Dress,Apparel,Women'S Wear,217.52,125.29
+P0199,Cotton T-Shirt,Apparel,Men'S Wear,4115.39,1992.62
+P0200,Lipstick,Beauty,Makeup,1356.63,729.29
+P0201,Smartwatch Pro,Electronics,Smartwatches,1669.86,1044.39
+P0202,Foundation,Beauty,Makeup,140.06,87.36
+P0203,Hair Oil,Beauty,Haircare,160.2,101.21
+P0204,Smartwatch Pro,Electronics,Smartwatches,455.48,309.71
+P0205,Smartwatch Pro,Electronics,Smartwatches,3151.65,1704.52
+P0206,Charging Cable,Electronics,Mobile Accessories,2694.43,1515.84
+P0207,Wall Clock,Home & Kitchen,Decor,1813.65,1381.58
+P0208,Wardrobe Organizer,Home & Kitchen,Storage,1505.59,856.2
+P0209,Kurti,Apparel,Women'S Wear,2750.87,1479.72
+P0210,Plastic Container Set,Home & Kitchen,Storage,2114.68,1153.43
+P0211,Hair Oil,Beauty,Haircare,461.51,309.05
+P0212,Foundation,Beauty,Makeup,3308.56,1651.15
+P0213,Table Lamp,Home & Kitchen,Decor,2129.86,1632.77
+P0214,Lipstick,Beauty,Makeup,1412.58,943.84
+P0215,Kurti,Apparel,Women'S Wear,1029.23,756.73
+P0216,Over-Ear Headphones,Electronics,Headphones,177.61,120.59
+P0217,Moisturizer,Beauty,Skincare,2195.71,1312.8
+P0218,Lipstick,Beauty,Makeup,2449.15,1347.78
+P0219,Foundation,Beauty,Makeup,690.37,346.82
+P0220,Hair Oil,Beauty,Haircare,1817.32,928.75
+P0221,Kurti,Apparel,Women'S Wear,493.79,258.53
+P0222,Plastic Container Set,Home & Kitchen,Storage,228.81,113.56
+P0223,Wall Clock,Home & Kitchen,Decor,2734.92,1258.62
+P0224,Pressure Cooker,Home & Kitchen,Cookware,1286.09,670.48
+P0225,Smartwatch Pro,Electronics,Smartwatches,3637.88,1869.78
+P0226,Wardrobe Organizer,Home & Kitchen,Storage,2595.96,1976.06
+P0227,Sandals,Apparel,Footwear,142.05,89.18
+P0228,Moisturizer,Beauty,Skincare,112.82,67.65
+P0229,Wardrobe Organizer,Home & Kitchen,Storage,1575.04,1084.86
+P0230,Over-Ear Headphones,Electronics,Headphones,1814.0,1033.98
+P0231,Summer Dress,Apparel,Women'S Wear,473.16,326.38
+P0232,Smartwatch Pro,Electronics,Smartwatches,1278.53,973.8
+P0233,Kurti,Apparel,Women'S Wear,2657.77,1523.41
+P0234,Kurti,Apparel,Women'S Wear,2646.45,1736.58
+P0235,Pressure Cooker,Home & Kitchen,Cookware,649.64,388.19
+P0236,Wireless Earbuds,Electronics,Headphones,275.73,148.44
+P0237,Wardrobe Organizer,Home & Kitchen,Storage,1372.1,1000.46
+P0238,Wireless Earbuds,Electronics,Headphones,922.28,516.47
+P0239,Smartwatch Pro,Electronics,Smartwatches,2161.21,1265.53
+P0240,Charging Cable,Electronics,Mobile Accessories,516.11,291.89
+P0241,Plastic Container Set,Home & Kitchen,Storage,1860.58,1013.72
+P0242,Running Shoes,Apparel,Footwear,1431.05,827.31
+P0243,Wardrobe Organizer,Home & Kitchen,Storage,243.71,132.82
+P0244,Over-Ear Headphones,Electronics,Headphones,1713.31,1076.3
+P0245,Face Wash,Beauty,Skincare,1970.3,1170.05
+P0246,Wall Clock,Home & Kitchen,Decor,3243.88,1888.22
+P0247,Plastic Container Set,Home & Kitchen,Storage,2012.13,1358.28
+P0248,Moisturizer,Beauty,Skincare,1237.64,765.02
+P0249,Wall Clock,Home & Kitchen,Decor,2967.04,1505.68
+P0250,Table Lamp,Home & Kitchen,Decor,1470.14,987.58
+P0251,Shampoo,Beauty,Haircare,2655.23,1256.13
+P0252,Wardrobe Organizer,Home & Kitchen,Storage,1839.64,1391.78
+P0253,Wireless Earbuds,Electronics,Headphones,2852.75,1337.9
+P0254,Face Wash,Beauty,Skincare,1913.06,1289.09
+P0255,Moisturizer,Beauty,Skincare,267.18,127.09
+P0256,Fitness Band,Electronics,Smartwatches,2254.4,1371.19
+P0257,Face Wash,Beauty,Skincare,2647.16,1919.92
+P0258,Wall Clock,Home & Kitchen,Decor,3166.84,1550.67
+P0259,Wardrobe Organizer,Home & Kitchen,Storage,3350.23,1850.96
+P0260,Fitness Band,Electronics,Smartwatches,173.47,115.55
+P0261,Running Shoes,Apparel,Footwear,678.99,399.92
+P0262,Smartwatch Pro,Electronics,Smartwatches,1091.81,641.47
+P0263,Foundation,Beauty,Makeup,132.06,73.02
+P0264,Fitness Band,Electronics,Smartwatches,1371.84,758.72
+P0265,Table Lamp,Home & Kitchen,Decor,765.0,490.89
+P0266,Foundation,Beauty,Makeup,720.85,518.36
+P0267,Smartwatch Pro,Electronics,Smartwatches,3198.85,1890.56
+P0268,Hair Oil,Beauty,Haircare,1105.87,536.26
+P0269,Over-Ear Headphones,Electronics,Headphones,2401.61,1546.9
+P0270,Wireless Earbuds,Electronics,Headphones,359.58,266.82
+P0271,Face Wash,Beauty,Skincare,453.79,220.07
+P0272,Table Lamp,Home & Kitchen,Decor,1579.92,1201.57
+P0273,Non-Stick Pan,Home & Kitchen,Cookware,2890.46,1768.98
+P0274,Wall Clock,Home & Kitchen,Decor,2277.59,1228.38
+P0275,Non-Stick Pan,Home & Kitchen,Cookware,1039.53,536.11
+P0276,Cotton T-Shirt,Apparel,Men'S Wear,3469.5,1988.94
+P0277,Face Wash,Beauty,Skincare,344.39,161.28
+P0278,Smartwatch Pro,Electronics,Smartwatches,3598.2,1747.61
+P0279,Wardrobe Organizer,Home & Kitchen,Storage,1627.84,793.7
+P0280,Cotton T-Shirt,Apparel,Men'S Wear,1760.26,1135.53
+P0281,Kurti,Apparel,Women'S Wear,4273.34,1968.83
+P0282,Plastic Container Set,Home & Kitchen,Storage,1285.59,830.69
+P0283,Running Shoes,Apparel,Footwear,324.38,151.49
+P0284,Wall Clock,Home & Kitchen,Decor,2867.48,1469.35
+P0285,Face Wash,Beauty,Skincare,387.22,260.95
+P0286,Summer Dress,Apparel,Women'S Wear,972.75,730.4
+P0287,Charging Cable,Electronics,Mobile Accessories,430.53,223.58
+P0288,Phone Case,Electronics,Mobile Accessories,3646.09,1930.95
+P0289,Over-Ear Headphones,Electronics,Headphones,1339.26,801.34
+P0290,Moisturizer,Beauty,Skincare,1339.91,751.71
+P0291,Wardrobe Organizer,Home & Kitchen,Storage,2726.51,1279.95
+P0292,Denim Jeans,Apparel,Men'S Wear,736.92,545.29
+P0293,Wireless Earbuds,Electronics,Headphones,2214.84,1602.19
+P0294,Pressure Cooker,Home & Kitchen,Cookware,374.1,215.92
+P0295,Foundation,Beauty,Makeup,582.4,399.39
+P0296,Foundation,Beauty,Makeup,1690.88,844.94
+P0297,Wireless Earbuds,Electronics,Headphones,2246.93,1225.12
+P0298,Summer Dress,Apparel,Women'S Wear,890.25,684.54
+P0299,Wireless Earbuds,Electronics,Headphones,3539.55,1697.51
+P0300,Shampoo,Beauty,Haircare,120.6,83.37

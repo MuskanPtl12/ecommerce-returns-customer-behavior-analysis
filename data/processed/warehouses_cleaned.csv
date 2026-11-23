@@ -1,0 +1,5 @@
+warehouse_id,warehouse_name,region
+W01,North Distribution Center,North
+W02,South Distribution Center,South
+W03,East Distribution Center,East
+W04,West Distribution Center,West
