@@ -166,7 +166,190 @@ Note: Repeated returns or frequently reported reasons do not automatically indic
 
 # 3. Data Understanding
 
-To be updated after inspecting the available datasets, their structure, columns, data types, and data quality.
+### Orders Table – Data Understanding
+
+Description: Each row represents one customer order and contains details such as order ID, customer ID, order date, warehouse, payment method, and order status.
+
+Dataset Size: 10 lakh rows and 9 columns.
+Observations: Three extra unnamed columns need to be removed, and order_date needs to be converted from string to datetime during ETL Data Cleaning.
+
+### Orders Items Table – Data Understanding
+
+The dataset contains 16,666,691 rows and 6 columns.
+
+The Orders Items table records the individual products purchased within each order. Each row represents one order item and contains its `order_item_id`, associated `order_id`, `product_id`, purchased `quantity`, `unit_price_at_sale`, and `line_total` (the total amount for that particular item).
+
+### Deliveries Table – Data Understanding
+
+The Deliveries table contains 799,835 rows and 4 columns. Each row represents an order's delivery details, including its dispatch date (`ship_date`), delivery date, and carrier.
+
+The `ship_date` indicates when the order was dispatched from the warehouse. Both date columns are stored as strings and will be converted to datetime during data cleaning.
+
+The difference in order IDs between the Orders and Deliveries tables will be checked during cross-table validation.
+
+### Products Table – Data Understanding
+
+The Products table contains 300 rows and 6 columns. Each row represents a product with its ID, name, category, subcategory, selling price, and cost price.
+
+`product_id` has 300 unique values, while `product_name` has only 25.
+
+**Data Cleaning:** Rename `unit_price` to `selling_price` and `unit_cost` to `cost_price`.
+
+### Customers Table – Data Understanding
+
+The Customers table contains 50,000 rows and 6 columns. Each row represents a customer, including their ID, name, email, signup date, region, and city.
+
+`customer_id`, `customer_name`, and `email_id` have 50,000 unique values. `signup_date` has 401 unique values, `region` has 9, and `city` has 10.
+
+**Data Cleaning:** Convert `signup_date` from string to datetime and standardize region names to resolve capitalization inconsistencies.
+
+### Returns Table – Data Understanding
+
+The Returns table contains **2,99,404 rows and 6 columns**. Each row represents a return record for an order item, including its return ID, order item ID, return date, return reason, return quantity, and refund amount.
+
+The `return_reason` column contains **50,063 null values**.
+The five unique return reasons are: **Size Issue, Wrong Item, Not as Described, Damaged, and Change Mind.** These represent different return reasons.
+
+**Data Cleaning:** Convert `return_date` from string to datetime.
+
+### Warehouses Table – Data Understanding
+
+The Warehouses table contains 4 rows and 3 columns. Each row represents a warehouse, including its ID, name, and region.
+Each column has 4 unique values.
+
+# Data Understanding – Data Quality Assessment & Cross-Check Findings
+
+## 1. Data Profiling
+
+The dataset contains the following tables:
+
+| Table | Rows | Columns |
+|---|---:|---:|
+| Orders | 1,000,000 | 9 |
+| Orders Items | 1,666,691 | 6 |
+| Deliveries | 799,835 | 4 |
+| Products | 300 | 6 |
+| Customers | 50,000 | 6 |
+| Returns | 299,404 | 6 |
+| Warehouses | 4 | 3 |
+
+## 2. Referential Integrity Validation
+
+### Orders – Customers
+- **Finding:** 4,000 order records contain customer IDs that do not exist in the Customers table.
+- These records represent 3,296 unique unmatched customer IDs.
+- The unmatched orders were observed between January and May 2024.
+- **Cleaning Note:** Investigate the missing customer master records. The exact reason is not confirmed.
+
+### Orders – Warehouses
+- **Finding:** No unmatched warehouse IDs were found.
+- **Conclusion:** All warehouse IDs in Orders exist in the Warehouses table.
+
+### Orders Items – Orders
+- **Finding:** No unmatched order IDs were found.
+- **Conclusion:** All order IDs in Orders Items exist in the Orders table.
+
+### Orders Items – Products
+- **Finding:** 5,000 records contain an unmatched product ID, `P9999`.
+- The same product ID appears in all 5,000 records.
+- **Cleaning Note:** Investigate the missing product reference and decide how these records should be handled.
+
+### Deliveries – Orders
+- **Finding:** No unmatched order IDs were found.
+- **Conclusion:** All delivery order IDs exist in the Orders table.
+
+### Returns – Orders Items
+- **Finding:** No unmatched order item IDs were found.
+- **Conclusion:** All return order item IDs exist in Orders Items.
+
+## 3. Business Rule & Data Consistency Validation
+
+### Orders Items – Line Total Validation
+- **Rule:** `line_total = quantity × unit_price_at_sale`
+- Exact comparison initially identified floating-point differences.
+- After applying a ₹0.01 tolerance, no meaningful calculation mismatches were found.
+- **Cleaning Note:** No correction required based on this check.
+
+### Returns – Return Quantity Validation
+- **Finding:** 15,046 return records have a `return_quantity` greater than the original ordered quantity.
+- Multiple return records for the same `order_item_id` were not found.
+- **Cleaning Note:** Investigate these records. The exact reason is not confirmed.
+
+### Customers – Signup Date vs Order Date
+- **Rule:** An order should not be placed before the customer's signup date.
+- **Finding:** No orders were found before the signup date among matched Orders and Customers records.
+- **Conclusion:** No date-sequence inconsistency was found in the matched records.
+
+### Returns – Refund Amount Validation
+- Expected item value was calculated as:
+
+  `return_quantity × unit_price_at_sale`
+
+- **Finding:**
+  - 5,647 records have refunds greater than the calculated item value.
+  - 5,738 records have refunds lower than the calculated item value.
+  - 288,019 records match the calculated item value.
+- **Cleaning Note:** Refund differences may have valid business explanations, such as partial refunds or adjustments. The exact reason cannot be confirmed from the available columns.
+
+## 4. Primary Key Uniqueness Validation
+
+Duplicate primary key values were checked across all seven tables.
+
+- Orders – `order_id`: 0 duplicates
+- Orders Items – `order_item_id`: 0 duplicates
+- Deliveries – `order_id`: 0 duplicates
+- Products – `product_id`: 0 duplicates
+- Customers – `customer_id`: 0 duplicates
+- Returns – `return_id`: 0 duplicates
+- Warehouses – `warehouse_id`: 0 duplicates
+
+**Conclusion:** No duplicate key values were found in the checked columns.
+
+## 5. Missing Value Assessment
+
+### Returns – Missing Return Reasons
+- **Finding:** 50,063 records have a missing `return_reason`.
+- **Cleaning Note:** Review and handle missing return reasons during Data Cleaning.
+
+## 6. Product Name & Category Consistency
+
+### Product Name Investigation
+- The Products table contains 300 product IDs but only 25 unique product names.
+- The same product name appears with different product IDs and prices.
+- Different brands or variants may explain the differences, but brand/variant details are unavailable.
+- **Cleaning Note:** Do not treat repeated product names as duplicates automatically. Preserve product IDs and prices unless a reliable correction is identified.
+
+### Category Standardization
+- Category values contain inconsistent capitalization, for example:
+  - `Electronics` / `electronics`
+  - `Home & Kitchen` / `home & kitchen`
+  - `Beauty` / `beauty`
+  - `Apparel` / `apparel`
+- **Cleaning Note:** Standardize category text during Data Cleaning.
+
+## 7. Additional Data Standardization Finding
+
+### Orders – Order Status
+- **Finding:** The `order_status` column contains inconsistent capitalization:
+  - `Cancelled`
+  - `cancelled`
+- **Cleaning Note:** Standardize text casing in categorical columns across the tables.
+
+Other text-based categorical columns to review during Data Cleaning include:
+- `payment_method`
+- `category`
+- `sub_category`
+- `return_reason`
+- `carrier`
+- `region`
+- `city`
+- `warehouse_name`
+
+## 8. Data Understanding – Conclusion
+
+Data Profiling, Data Quality Assessment, Referential Integrity Validation, Business Rule Validation, and the planned Cross-Checks have been completed.
+
+The findings above will guide the Data Cleaning phase. Records will not be dropped or modified automatically. Each issue will be reviewed, and the cleaning action will be selected based on the available evidence and project requirements.
 
 # 4. Data Preparation
 
