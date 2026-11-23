@@ -8,9 +8,12 @@ __pycache__/
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
-# Raw and processed datasets
+# Raw datasets (not uploaded to GitHub)
 data/raw/
-data/processed/
+
+# Processed / cleaned datasets (uploaded to GitHub)
+!data/processed/
+!data/processed/*.csv
 
 # Environment variables and secrets
 .env
