@@ -351,9 +351,228 @@ Data Profiling, Data Quality Assessment, Referential Integrity Validation, Busin
 
 The findings above will guide the Data Cleaning phase. Records will not be dropped or modified automatically. Each issue will be reviewed, and the cleaning action will be selected based on the available evidence and project requirements.
 
-# 4. Data Preparation
+# 4. Data Preparation / Data Cleaning 
 
-To be updated after data cleaning, transformation, and validation.
+### 1. Overview
+
+The Data Cleaning phase was performed after completing the Data Understanding phase. The cleaning process was carried out table by table, based on the issues identified during data understanding.
+
+The objective was to improve data consistency, handle missing values, standardize text fields, and prepare the dataset for further analysis.
+
+**Approach followed:**
+- Cleaned tables individually.
+- Applied only the cleaning operations supported by the identified data issues.
+- Preserved records where the reason for modification or deletion could not be confirmed.
+- Documented unresolved data quality issues as project limitations.
+
+---
+
+## 2. Date Format Standardization
+
+All date columns were converted into a consistent datetime format.
+
+| Table Name | Column Name | Original Format | Action Taken |
+|---|---|---|---|
+| `orders` | `order_date` | DD-MM-YYYY | Converted to datetime |
+| `deliveries` | `ship_date` | YYYY-MM-DD | Converted to datetime |
+| `deliveries` | `delivery_date` | YYYY-MM-DD | Converted to datetime |
+| `customers` | `signup_date` | YYYY-MM-DD | Converted to datetime |
+
+**Reason:**
+
+Consistent datetime types support date-based filtering, sorting, comparisons, and time-based analysis.
+
+The original date formats were specified during conversion to ensure correct interpretation of the values.
+
+---
+
+## 3. Text Standardization
+
+Text columns were standardized to maintain consistency in categorical values.
+
+The following operations were applied:
+
+- Removed leading and trailing whitespace using `.str.strip()`.
+- Standardized text casing using `.str.title()`.
+
+| Table Name | Column Name | Cleaning Performed |
+|---|---|---|
+| `orders` | `order_status` | Standardized casing and whitespace |
+| `customers` | `region` | Standardized casing and whitespace |
+| `products` | `category` | Standardized casing and whitespace |
+| `products` | `sub_category` | Standardized casing and whitespace |
+| `products` | `product_name` | Standardized casing and whitespace |
+| `returns` | `return_reason` | Standardized casing and whitespace |
+
+**Examples:**
+
+- `cancelled` → `Cancelled`
+- `electronics` → `Electronics`
+- `jammu kashmir` → `Jammu Kashmir`
+
+These operations improved consistency in categorical values without changing the underlying business meaning.
+
+---
+
+## 4. Missing Value Handling
+
+### Table: `returns`
+
+**Column:** `return_reason`
+
+During Data Understanding, 50,063 missing values were identified in the `return_reason` column.
+
+**Action taken:**
+
+Missing values were replaced with `"Unknown"`.
+
+**Reason:**
+
+The actual return reason was not available for these records. Assigning `"Unknown"` preserves the records while clearly representing the absence of information.
+
+No actual return reason was fabricated.
+
+---
+
+## 5. Column Name Standardization
+
+Column names were renamed to improve clarity and maintain meaningful naming conventions.
+
+| Table Name | Original Column Name | New Column Name |
+|---|---|---|
+| `products` | `unit_price` | `selling_price` |
+| `orders_items` | `line_total` | `total_price` |
+
+**Reason:**
+
+The updated names are more descriptive and easier to understand during SQL analysis, Python analysis, and dashboard development.
+
+Only the column names were changed. The underlying values were not modified.
+
+---
+
+## 6. Removal of Unnecessary Columns
+
+### Table: `orders`
+
+A completely empty column was identified and removed.
+
+**Reason:**
+
+The column contained no meaningful information and was not useful for analysis.
+
+No records were deleted as part of this operation.
+
+---
+
+# 7. Data Quality Issues Retained Due to Data Limitations
+
+Some data quality issues were identified during Data Understanding but were not modified during Data Cleaning.
+
+These issues were retained because sufficient evidence was not available to determine the correct values or justify deleting the records.
+
+## 7.1 Missing Customer References
+
+**Tables involved:** `orders` and `customers`
+
+During Data Understanding, 4,000 order records were found with customer IDs that did not exist in the customer master table. These records represented 3,296 unique customer IDs.
+
+**Action taken:** Retained the order records.
+
+**Reason:**
+
+Deleting these orders would result in the loss of transaction data. The reason for the missing customer references could not be confirmed, so the records were preserved.
+
+These are unmatched customer references, not missing values in the `orders.customer_id` column.
+
+---
+
+## 7.2 Unmatched Product IDs
+
+**Tables involved:** `orders_items` and `products`
+
+A total of 5,000 order-item records contained the product ID `P9999`, which was not present in the product master table.
+
+**Action taken:** Retained the records.
+
+**Reason:**
+
+The actual product details could not be identified from the available product master data.
+
+Deleting these records would cause a loss of order-item information. Therefore, the records were retained and documented as an unmatched product reference.
+
+---
+
+## 7.3 Return Quantity Exceeding Original Quantity
+
+**Tables involved:** `returns` and `orders_items`
+
+During Data Understanding, 15,046 return records were found where the return quantity exceeded the original order-item quantity.
+
+**Action taken:** No quantity values were modified or records deleted.
+
+**Reason:**
+
+The dataset did not provide sufficient evidence to determine the correct return quantity for these records.
+
+Possible explanations such as data-entry errors or business-specific return adjustments could not be confirmed. Therefore, the original values were preserved.
+
+---
+
+## 7.4 Refund Amount Discrepancies
+
+**Tables involved:** `returns` and `orders_items`
+
+Refund validation was performed by comparing the recorded refund amount with the expected item value calculated from return quantity and unit price.
+
+The analysis identified:
+
+- 5,647 records with refunds above the expected item value.
+- 5,738 records with refunds below the expected item value.
+- 288,019 records where the refund matched the expected item value.
+
+**Action taken:** Refund amounts were not modified.
+
+**Reason:**
+
+The available dataset did not provide sufficient information about discounts, partial refunds, taxes, shipping charges, or other refund adjustments.
+
+Therefore, the differences could not be conclusively classified as errors. The original refund values were retained.
+
+---
+
+## 7.5 Repeated Product Names
+
+**Table:** `products`
+
+Repeated product names were identified across different product IDs.
+
+**Action taken:** No duplicate product records were deleted.
+
+**Reason:**
+
+Different product IDs may represent different product variants, prices, or catalog entries.
+
+The dataset did not contain sufficient attributes to confirm whether these records were true duplicates. Therefore, product records were preserved.
+
+---
+
+## 7.6 Warehouse Table
+
+**Table:** `warehouses`
+
+**Action taken:** No additional cleaning was performed.
+
+**Reason:**
+
+Based on the issues identified during Data Understanding, no cleaning operation was considered necessary for this table.
+
+---
+
+# 8. Conclusion
+
+The Data Cleaning phase improved data consistency through date conversion, text standardization, missing value handling, and column renaming. Unresolved data quality issues were retained and documented due to insufficient evidence for correction. The cleaned dataset is now ready for Exploratory Data Analysis (EDA).
+
 
 # 5. Modeling
 
